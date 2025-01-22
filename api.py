@@ -90,7 +90,7 @@ def run_flask_app():
         if not ip or not port or not time:
             return jsonify({'error': 'Missing parameters'}), 400
 
-        command = f"./sharp {ip} {port} {time} 1000"
+        command = f"./bgmi {ip} {port} {time} 1000"
         response = execute_command_async(command, time)
         return jsonify(response)
 
